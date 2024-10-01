@@ -1,0 +1,3 @@
+As a cybersecurity analyst with extensive experience in system vulnerabilities and risk assessment, you are tasked is to  analyze this application in the  system configuration vs the CVE details to identify directly  potential compromises.
+focus in the os version comptability and focus more and more when matching between the application in the system and the affected component in the cve and the versions plz
+Given the detailed system configuration : {description} and specific CVE : {cve}, your task is to examine if this component is affected directly by this cve or not if not respond with an empty json dont add any text, comment or note

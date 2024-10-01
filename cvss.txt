@@ -1,0 +1,158 @@
+CVSS v3.1 Overview:
+The Common Vulnerability Scoring System (CVSS) is an industry-standard method for evaluating the severity of security vulnerabilities. It assigns a numerical score based on three primary metric groups: Base, Temporal, and Environmental. Each score reflects various characteristics of the vulnerability and helps prioritize security responses.
+
+1. Base Metrics:
+These metrics capture the fundamental attributes of a vulnerability that remain constant over time.
+
+Attack Vector (AV): Describes how the vulnerability can be exploited:
+
+Network (N): Accessible remotely.
+Adjacent (A): Requires proximity (e.g., same network).
+Local (L): Requires physical access.
+Physical (P): Requires direct physical access to the system.
+Attack Complexity (AC): Measures how easy it is to exploit:
+
+Low (L): Simple to exploit.
+High (H): Requires special conditions.
+Privileges Required (PR): Describes the privileges an attacker needs:
+
+None (N): No privileges required.
+Low (L): Basic privileges needed.
+High (H): Admin-level access required.
+User Interaction (UI): Indicates whether the attack requires user interaction:
+
+None (N): No interaction needed.
+Required (R): Requires user input.
+Scope (S): Measures if exploitation affects other systems or components:
+
+Unchanged (U): Impact remains within the original system.
+Changed (C): Affects other components or systems.
+Impact Metrics: Reflect the severity of impacts on Confidentiality (C), Integrity (I), and Availability (A):
+
+None (N): No impact.
+Low (L): Limited impact.
+High (H): Significant impact.
+2. Temporal Metrics:
+These metrics account for characteristics that change over time, such as the availability of exploits and remediation.
+
+Exploitability (E): The availability and maturity of exploit code.
+
+Unproven (U) to High (H).
+Remediation Level (RL): Indicates the availability of a fix.
+
+Official Fix (O) to Unavailable (U).
+Report Confidence (RC): How well the vulnerability is understood.
+
+Unknown (U) to Confirmed (C).
+3. Environmental Metrics:
+These metrics are customized to reflect the specific context of the organization affected by the vulnerability.
+
+Confidentiality, Integrity, Availability Requirements: Organizations assign a priority level to each metric:
+Low (L), Medium (M), High (H) importance.
+CVSS Vector Example:
+For a vector like CVSS:3.1/AV
+/AC
+/PR
+/UI
+/S
+/C
+/I
+/A
+, here’s how the vulnerability is described:
+
+AV:N: Exploitable over the network.
+AC:L: Low complexity, easy to exploit.
+PR:L: Low-level privileges required.
+UI:N: No user interaction needed.
+S:C: Scope is changed, impacting other systems.
+C:L: Low confidentiality impact.
+I:N: No integrity impact.
+A:N: No availability impact.
+How CVSS Scores Are Calculated:
+Impact Sub-Score:
+
+Impact
+=
+1
+−
+(
+(
+1
+−
+𝐶
+)
+×
+(
+1
+−
+𝐼
+)
+×
+(
+1
+−
+𝐴
+)
+)
+Impact=1−((1−C)×(1−I)×(1−A))
+Exploitability Sub-Score:
+
+Exploitability
+=
+8.22
+×
+𝐴
+𝑉
+×
+𝐴
+𝐶
+×
+𝑃
+𝑅
+×
+𝑈
+𝐼
+Exploitability=8.22×AV×AC×PR×UI
+Base Score Calculation:
+
+Scope Unchanged (S
+):
+Base Score
+=
+min
+⁡
+(
+Impact
++
+Exploitability
+,
+10
+)
+Base Score=min(Impact+Exploitability,10)
+Scope Changed (S
+):
+Base Score
+=
+min
+⁡
+(
+1.08
+×
+(
+Impact
++
+Exploitability
+)
+,
+10
+)
+Base Score=min(1.08×(Impact+Exploitability),10)
+Why CVSS is Important:
+Prioritization: Helps organizations prioritize vulnerabilities by severity.
+Mitigation Planning: Guides decisions on which vulnerabilities to address first.
+Tailored Assessment: The Environmental metrics enable organizations to customize scoring based on their specific security requirements.
+Where to Find CVSS Metrics and Tools:
+Official Documentation: The CVSS v3.1 Specification Document provides all metric values and examples.
+CVSS Calculators: Tools like the NVD CVSS Calculator simplify score calculation.
+Conclusion:
+Using CVSS v3.1 allows organizations to assess vulnerabilities in a consistent and systematic way, helping to reduce security risks effectively. It is an invaluable tool for vulnerability management, enabling teams to make informed decisions on patching and other security controls.

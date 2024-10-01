@@ -1,0 +1,143 @@
+with 1340 cve en 2024 vs the same system configuration to benchmark the application web vs the graph rag pipeline to find the verubailities :
+
+with the application this is the cve who affect this applications intothe system configuration : 
+CVE-2023-43545 : node6 Ubuntu 18.04 LTS (x86_64) 18.04 10.10.10.105 SNMP Net-SNMP 5.7.3
+CVE-2024-5360  : node6 Ubuntu 18.04 LTS (x86_64) 18.04 10.10.10.105 PHP PHP 5.6
+CVE-2024-25977 : node6 Ubuntu 18.04 LTS (x86_64) 18.04 10.10.10.105 Joomla Joomla 3.8
+CVE-2024-2421  : node6 Ubuntu 18.04 LTS (x86_64) 18.04 10.10.10.105 PHP PHP 5.6
+CVE-2024-3947  : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7
+CVE-2024-5360  : node6 Ubuntu 18.04 LTS (x86_64) 18.04 10.10.10.105 PHP PHP 5.6
+CVE-2024-4858  : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7
+
+CVE-2024-2220
+CVE-2024-4431
+CVE-2024-4362
+
+CVE-2024-34161 : node3 CentOS Linux 8 (x86_64) 8 10.10.10.114 nginx nginx 1.0.9
+
+CVE-2023-6844 : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7
+CVE-2023-43545 : node6 Ubuntu 18.04 LTS (x86_64) 18.04 10.10.10.105 SNMP Net-SNMP 5.7.3
+CVE-2023-43544 : 	node6 Ubuntu 18.04 LTS (x86_64) 18.04 10.10.10.105 SNMP Net-SNMP 5.7.3
+CVE-2023-43544 : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 Internet Explorer Internet Explorer 11.0.9600.16428
+
+CVE-2024-1717 : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7
+
+CVE-2024-2793 : no
+CVE-2024-2422 : node6 Ubuntu 18.04 LTS (x86_64) 18.04 10.10.10.105 PHP PHP 5.6
+
+CVE-2024-35629 : node6 Ubuntu 18.04 LTS (x86_64) 18.04 10.10.10.105 PHP PHP 5.6
+
+CVE-2024-4358 : node5 Windows 10 Pro 21H2 10.10.10.20 IIS 10.0 : 
+
+CVE-2024-35226 : node6 Ubuntu 18.04 LTS (x86_64) 18.04 10.10.10.105 PHP PHP 5.6
+CVE-2024-5357 : 	node6 Ubuntu 18.04 LTS (x86_64) 18.04 10.10.10.105 PHP PHP 5.6
+CVE-2024-0867 : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7
+
+*********** and this is the false positive who generates the application : 
+CVE-2024-5060  : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7 : no
+CVE-2024-5086 : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7  : no
+CVE-2023-46630 : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7 : no
+CVE-2024-5418 : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7  : no
+CVE-2024-1814 : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7 : no
+CVE-2024-3519 : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7 : no
+CVE-2024-4870 : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7 : no
+CVE-2023-39161 : node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7 : no
+CVE-2024-4980  :node2 Microsoft Windows 10 Pro 10.0.19041 N/A Build 19041 10.10.10.102 wordpress wordpress-4.7 : no
+CVE-2024-5519	node6 Ubuntu 18.04 LTS (x86_64) 18.04 10.10.10.105 PHP PHP 5.6 : no
+
+so 10 verunabilities are false positive  wich affect the same component
+
+*********************************************************************************
+*********************************************************************************
+wich cves affect directly this system configuration : devices: [{device_id: node1, device_type: LINUX HOST CLIENT, operating_system: {name: Ubuntu 22.04.3 LTS (x86_64), version: 22.04.3}, installed_applications: [{app_name: SSH, version: OpenSSH 8.2p1, ports: [22]}, {app_name: DNS, version: BIND 9.16.22, ports: [53]}, {app_name: HTTP, version: Apache 2.4.41, ports: [80]}, {app_name: vsftpd, version: vsftp 2.3.4, ports: [21]}], network_settings: {ip_address: 10.10.10.101, subnet_mask: 255.255.255.0, default_gateway: 10.10.10.10}, security_settings: {firewall_enabled: True, default_password_changed: False, encryption_enabled: True, remote_access_enabled: True}}, {device_id: node2, device_type: Windows host client, operating_system: {name: Microsoft Windows 10 Pro, version: 10.0.19041 N/A Build 19041}, installed_applications: [{app_name: SSH, version: OpenSSH 8.2p1, ports: [22]}, {app_name: DNS, version: BIND 9.16.22, ports: [53]}, {app_name: Syslog, version: Rsyslog 8.1912, ports: [514]}, {app_name: 7-zip, version: 7-zip 17.01 beta}, {app_name: SLmail, version: SLmail 5.5, ports: [110]}, {app_name: Internet Explorer, version: Internet Explorer 11.0.9600.16428, ports: [110]}, {app_name: apache2, version: apache2=2.4.18-2ubuntu3.14, ports: [80]}, {app_name: mysql-server, version: mysql-server-5.7, ports: [3306]}, {app_name: wordpress, version: wordpress-4.7, ports: [80]}, {app_name: samba, version: SMB 4.6.2, ports: [445]}, {app_name: Firefox, version: 88.0, ports: [8080]}], network_settings: {ip_address: 10.10.10.102, subnet_mask: 255.255.255.0, default_gateway: 10.10.10.10}, security_settings: {firewall_enabled: False, default_password_changed: True, remote_management_enabled: False}}, {device_id: node3, device_type: LINUX HOST CLIENT, operating_system: {name: CentOS Linux 8 (x86_64), version: 8}, installed_applications: [{app_name: SSH, version: OpenSSH 8.2p1, ports: [22]}, {app_name: DNS, version: BIND 9.16.22, ports: [53]}, {app_name: HTTP, version: Apache 2.4.41, ports: [80]}, {app_name: vsftpd, version: vsftp 2.3.4, ports: [21]}], network_settings: {ip_address: 10.10.10.103, subnet_mask: 255.255.255.0, default_gateway: 10.10.10.10}, security_settings: {firewall_enabled: True, default_password_changed: False, encryption_enabled: True, remote_access_enabled: True}}, {device_id: node5, device_type: Windows 10 Pro (Architecture x64), operating_system: {name: Windows 10 Pro, version: 21H2}, installed_applications: [{app_name: SSH, version: OpenSSH for Windows, ports: [22]}, {app_name: Windows Defender, version: Latest}, {app_name: IIS, version: 10.0, ports: [80]}, {app_name: Remote Desktop, version: 10.0, ports: [3389]}, {app_name: DNS, version: Windows DNS, ports: [53]}], network_settings: {ip_address: 10.10.10.20, subnet_mask: 255.255.255.0, default_gateway: 10.10.10.1}, security_settings: {firewall_enabled: True, default_password_changed: True, encryption_enabled: True, remote_access_enabled: True}}, {device_id: node6, device_type: Ubuntu Server, operating_system: {name: Ubuntu 18.04 LTS (x86_64), version: 18.04}, installed_applications: [{app_name: SSH, version: OpenSSH 7.2p2, ports: [22]}, {app_name: HTTP, version: Apache 2.4.29, ports: [80]}, {app_name: FTP, version: vsftpd 3.0.3, ports: [21]}, {app_name: MySQL, version: MySQL 5.7.22, ports: [3306]}, {app_name: PHP, version: PHP 5.6}, {app_name: Joomla, version: Joomla 3.8, ports: [80]}, {app_name: Samba, version: Samba 4.3.11, ports: [139, 445]}, {app_name: SMTP, version: Postfix 3.1.0, ports: [25]}, {app_name: SNMP, version: Net-SNMP 5.7.3, ports: [161]}, {app_name: Telnet, version: Telnet Server, ports: [23]}], network_settings: {ip_address: 10.10.10.105, subnet_mask: 255.255.255.0, default_gateway: 10.10.10.1}, security_settings: {firewall_enabled: False, default_password_changed: False, encryption_enabled: False, remote_access_enabled: True}}]
+
+**************************************************************************************
+****************************************************************************************
+
+with the graph rag when passing al the configuraton for feltring that is what i got : 
+SUCCESS: Global Search Response: Based on the provided system configuration, several critical Common 
+Vulnerabilities and Exposures (CVEs) may directly affect the Linux host clients, specifically those running Ubuntu 22.04.3 LTS and CentOS 8. Below is a summary of the relevant vulnerabilities:
+
+### Vulnerabilities Affecting Linux Host Clients
+
+1. **OpenSSH 8.2p1 Vulnerabilities**:
+   - The installed version of OpenSSH is associated with CVE-2021-47434 and CVE-2021-47435, which pose security risks in environments where SSH is utilized for remote access. These vulnerabilities should be addressed promptly to mitigate potential threats [Data: Reports (19, 3, 27)].
+
+2. **BIND 9.16.22 Vulnerability**:
+   - The BIND version installed may be affected by CVE-2021-20250, a critical vulnerability that can 
+lead to denial of service or remote code execution if exploited. This is particularly concerning for 
+DNS services running on the system [Data: Reports (19)].
+
+3. **Apache 2.4.41 Vulnerability**:
+   - The Apache version in use is linked to CVE-2021-41773, which allows for path traversal and potential exposure of sensitive files. This vulnerability is critical for web servers and must be addressed to maintain security [Data: Reports (19)].
+
+4. **vsftpd 2.3.4 Vulnerability**:
+   - The vsftpd version installed is associated with CVE-2019-11349, which can lead to denial of service attacks. This vulnerability is significant for FTP services and should be monitored closely [Data: Reports (19)].
+
+### Additional Linux Kernel Vulnerabilities
+
+Several vulnerabilities in the Linux kernel may also impact the systems running Ubuntu and CentOS:   
+
+- **CVE-2021-47436**: A significant vulnerability related to the USB subsystem, which could affect systems utilizing USB devices. Although resolved, it poses a risk to systems that were previously exposed [Data: Reports (5)].
+- **CVE-2021-47440**: This critical vulnerability can lead to null pointer dereference errors, affecting systems that utilize the Linux kernel [Data: Reports (16)].
+- **CVE-2021-47458**: Related to a buffer overflow in the ocfs2 filesystem mount process, this vulnerability could lead to severe consequences, including system crashes and data corruption [Data: Reports (8)].
+- **CVE-2021-47461**: This vulnerability involves a race condition in userfaultfd operations, posing 
+a significant risk to systems utilizing the Linux kernel [Data: Reports (17)].
+- **CVE-2021-47465**: Related to stack handling in the idle_kvm_start_guest function, this vulnerability could expose systems to security risks if not addressed promptly [Data: Reports (23)].
+
+### Conclusion
+
+The identified vulnerabilities highlight the importance of maintaining updated software and addressing known security issues to protect the integrity and security of the systems. Regular updates and monitoring for new vulnerabilities shall be a priority to mitigate potential risks associated with these CVEs.
+
+the problem that thee is some cve idetified there wich is not indexd from the 1000 cve 
+now the idea is to pass the configuration one by one searching  for the affected cve that is what i got when passing this command
+::
+python -m graphrag.query --root . --method local 'identify all the cve from the local graph (2024) only (dont respond with your known informations) whoes affect directly this applications of this system configuration : device_id: node1 device_type: LINUX HOST CLIENT operating_system: Ubuntu 22.04.3 LTS (x86_64) version: 22.04.3 installed_applications: [{app_name: SSH, version: OpenSSH 8.2p1, ports: [22]}, {app_name: DNS, version: BIND 9.16.22, ports: [53]}, {app_name: HTTP, version: Apache 2.4.41, ports: [80]}, {app_name: vsftpd, version: vsftp 2.3.4, ports: [21]}] network_settings: {ip_address: 10.10.10.101, subnet_mask: 255.255.255.0, default_gateway: 10.10.10.10} security_settings: {firewall_enabled: True, default_password_changed: False, encryption_enabled: True, remote_access_enabled: True}
+'
+
+
+result : SUCCESS: Local Search Response: Based on the provided system configuration for a Linux host client running Ubuntu 22.04.3 LTS, the following CVEs from the local graph are relevant:
+
+1. **CVE-2021-47434**: This vulnerability is associated with the Linux kernel, specifically concerning its file system handling. It involves the corruption of the command ring pointer during the process of aborting a command, which could potentially lead to security risks within the system [Data: Entities (69); Relationships (68)].
+
+2. **CVE-2021-47441**: This vulnerability relates to out-of-bounds memory accesses in the mlxsw thermal driver, which could lead to system instability or unauthorized access if exploited [Data: Entities (110); Relationships (79)].
+
+3. **CVE-2021-47450**: This vulnerability is related to KVM and host stage-2 PGD refcount management, which can cause issues in virtualized environments, potentially affecting the stability of applications running on the host [Data: Entities (179); Relationships (102)].
+
+4. **CVE-2021-47459**: This vulnerability involves a use-after-free issue in the j1939 networking subsystem, which could lead to system crashes or unauthorized access [Data: Entities (205); Relationships (121)].
+
+5. **CVE-2021-47462**: This vulnerability is related to memory policy handling in the Linux kernel, which has been resolved through a patch. It indicates a direct relationship between the event and the 
+kernel's operation [Data: Entities (216); Relationships (125)].
+
+These vulnerabilities highlight potential risks that could affect the stability and security of the applications installed on the specified system configuration. Organizations should prioritize addressing these vulnerabilities to maintain system integrity and security.
+
+
+
+ else : 
+(.venv) PS C:\Users\alaed\OneDrive\Bureau\1000CVE> python -m graphrag.query --root . --method local 'identify all the cve from the local graph (2024) only (dont respond with your known informations) whoes affect directly this applications of this system configuration : device_id: node1 device_type: LINUX HOST CLIENT operating_system: Ubuntu 22.04.3 LTS (x86_64) version: 22.04.3 installed_applications: [{app_name: SSH, version: OpenSSH 8.2p1, ports: [22]}, {app_name: DNS, version: BIND 9.16.22, ports: [53]}, {app_name: HTTP, version: Apache 2.4.41, ports: [80]}, {app_name: vsftpd, version: vsftp 2.3.4, ports: [21]}] network_settings: {ip_address: 10.10.10.101, subnet_mask: 255.255.255.0, default_gateway: 10.10.10.10} security_settings: {firewall_enabled: True, default_password_changed: False, encryption_enabled: True, remote_access_enabled: True}
+result :: 
+1. **CVE-2024-1446**: This vulnerability is associated with the NextScripts: Social Networks Auto-Poster plugin, which allows unauthenticated attackers to delete arbitrary posts or pages. While it primarily affects a specific plugin, it is mentioned in relation to a security vulnerability in the Linux 
+kernel, which could indirectly impact the overall system security [Data: Entities (249); Relationships (246)].
+
+2. **CVE-2024-21683**: This is a high severity Remote Code Execution vulnerability affecting Confluence Data Center and Server. Although it does not directly relate to the installed applications, the nature of the vulnerability suggests that if any web applications or services are running on the server, they could be at risk if not properly secured [Data: Entities (2); Relationships (5)].
+
+now with this component :: 
+python -m graphrag.query --root . --method local 'identify all the cve from the local graph (2024) only (dont respond with your known informations) whoes affect directly this applications of this system configuration : device_id: node2 device_type: Windows host client operating_system: Microsoft Windows 10 Pro version: 10.0.19041 N/A Build 19041 installed_applications: [{app_name: SSH, version: OpenSSH 8.2p1, ports: [22]}, {app_name: DNS, version: BIND 9.16.22, ports: [53]}, {app_name: Syslog, version: Rsyslog 8.1912, ports: [514]}, {app_name: 7-zip, version: 7-zip 17.01 beta}, {app_name: SLmail, version: SLmail 5.5, ports: [110]}, {app_name: Internet Explorer, version: Internet Explorer 11.0.9600.16428, ports: [110]}, {app_name: apache2, version: apache2=2.4.18-2ubuntu3.14, ports: [80]}, {app_name: mysql-server, version: mysql-server-5.7, ports: [3306]}, {app_name: wordpress, version: wordpress-4.7, ports: [80]}, {app_name: samba, version: SMB 4.6.2, ports: [445]}, {app_name: Firefox, version: 88.0, ports: [8080]}] network_settings: {ip_address: 10.10.10.102, subnet_mask: 255.255.255.0, default_gateway: 10.10.10.10} security_settings: {firewall_enabled: False, default_password_changed: True, remote_management_enabled: False}'
+
+result : SUCCESS: Local Search Response: Based on the provided system configuration and the local graph data for 2024, the following CVEs are identified that may affect the applications installed on the specified Windows host:
+
+1. **CVE-2024-1446**: This vulnerability is associated with the NextScripts: Social Networks Auto-Poster plugin, which allows unauthenticated attackers to delete arbitrary posts or pages. While this CVE primarily affects a WordPress plugin, it is relevant due to the presence of WordPress (version 4.7) 
+on the system [Data: Entities (249); Relationships (246)].
+
+2. **CVE-2024-1762**: This vulnerability also pertains to the NextScripts: Social Networks Auto-Poster plugin, allowing unauthenticated attackers to inject arbitrary web scripts. Similar to CVE-2024-1446, it is relevant due to the WordPress application [Data: Entities (252); Relationships (249)].      
+
+3. **CVE-2024-2088**: This CVE involves sensitive information exposure in the NextScripts: Social Networks Auto-Poster plugin, which could allow authenticated attackers to extract sensitive data. This is again relevant due to the WordPress application [Data: Entities (253); Relationships (250)].       
+
+These vulnerabilities highlight potential security risks associated with the installed applications, 
+particularly the WordPress plugin, which could be exploited if not properly managed. Continuous monitoring and timely updates are essential to mitigate these risks.
+
+*************************************************************************
+
+python -m graphrag.query --root . --method local 'identify all the cve from the local graph (2024) only (dont respond with your known informations) whoes affect directly this applications of this system configuration : device_id: node6 device_type: Ubuntu Server operating_system: Ubuntu 18.04 LTS (x86_64) version: 18.04 installed_applications: [{app_name: SSH, version: OpenSSH 7.2p2, ports: [22]}, {app_name: HTTP, version: Apache 2.4.29, ports: [80]}, {app_name: FTP, version: vsftpd 3.0.3, ports: [21]}, {app_name: MySQL, version: MySQL 5.7.22, ports: [3306]}, {app_name: PHP, version: PHP 5.6}, {app_name: Joomla, version: Joomla 3.8, ports: [80]}, {app_name: Samba, version: Samba 4.3.11, ports: [139, 445]}, {app_name: SMTP, version: Postfix 3.1.0, ports: [25]}, {app_name: SNMP, version: Net-SNMP 5.7.3, ports: [161]}, {app_name: Telnet, version: Telnet Server, ports: [23]}] network_settings: {ip_address: 10.10.10.105, subnet_mask: 255.255.255.0, default_gateway: 10.10.10.1} security_settings: {firewall_enabled: False, default_password_changed: False, encryption_enabled: False, remote_access_enabled: True}
+'
+

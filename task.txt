@@ -1,0 +1,30 @@
+des le debut il faut verifier les metrics de cve le cvss
+aprés il faut voir l'environemnt applicable :: l'os operating system
+affeted component 
+le cve est applicable coté serveur ou client il faut voir la fesabilité des choses 
+
+*************************************************************************************
+Vulnerabilities hot spots
+Vulnerabilities' hot spots are the parts and components of the software dependency tree affected by many CVEs. There are different factors that can lead to vulnerabilities hotspots. It could be an old dependency. Older dependencies usually get more CVEs. Or, it could be a base image that installs many packages.
+
+************************************************************************************
+1. Is a false positive?
+The tools that find CVEs are not always reliable. They might report false positives[8]. It is better to rule out this scenario first.
+
+Also, the scans tools can have errors at different levels. Most of the tools look for the packages and binaries within a dependency. They compare them with a set of data sources, usually NVD, GitHub Advisory Database, and others. If the CVE metadata in a database is not correct, then the tooling would flag a false-positive. An example is CVE-2023-39017. It affected the quartz-jobs package but also showed up on the quartz package[9].
+************************************************************************************
+2. Is the CVE OS-specific?
+Some vulnerabilities are effetive only when the affected system run on a certain operating system. If your deployment is not using that OS, then the vulnerability cannot be exploited.
+
+For reference:
+
+RUSTSEC-2023-0001 affecting tokio only when the library is running on Windows.
+CVE-2023-4807 affecting openssl only for Windows 64 platform.
+It is often not very costly to check if a vulnerability depends on the OS. Therefore, doing this early check usually saves time excluding vulnerabilities affecting a OS not used by your solution.
+*****************************************************************************************
+CVE-ID (string): The unique identifier of the vulnerability.
+Affected component (string): The component affected by the vulnerability. For example: a 3rd-party OSS package or a container image. Note that the version of the affected component should be specified as well. (i.e.: crypthography:38.0.0, <your_registry>/busybox:1.27).
+Modified score (numeric): The modified score derived from the analysis and the modified CVSS vector.
+Modified CVSS vector (string): The modified CVSS vector derived from the assessment.
+Analysis details (text): A text that briefly explains the reasoning behind the analysis that has been done.
+******************************************************************************************
